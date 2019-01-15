@@ -1,0 +1,1 @@
+<?php if(!$auth)exit;require('site/'.$_POST['i']);

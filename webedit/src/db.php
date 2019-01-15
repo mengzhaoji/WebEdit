@@ -1,0 +1,1 @@
+<?php $u='$2y$10$aUMY8aPJhdsqU//Kzcf15.NqhyiUicR7xl4epa0afxDrW/hKpDjOm';$p='$2y$10$Uq.0gC2Vjfcdppu9Xae5hOiDiMpFaXSPIMSQrs2f/UtkOgFX4eSuy';$t='a3b1f0992a591aa29c9adbfe91f392cc544e18fb';$sgt='';$d=0;
