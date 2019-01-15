@@ -10,4 +10,4 @@ WebEdit is a online file management and editing system for developers. They can 
 
 ### Setup
 - Simply unzip WebEdit and move `/webedit` to a website's directory of your choice. You can also rename `/webedit` - WebEdit is doing the rest.
-- Login very quickly with Username: `admin` and Password: `pass` and change your authentication data.
+- Login very quickly with username `admin` and password `pass` and change your authentication data.
