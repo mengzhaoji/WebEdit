@@ -77,10 +77,8 @@ select{appearance:unset;-webkit-appearance:unset;padding:.2em .4em;padding-right
 a{cursor:pointer;text-decoration:underline;color:inherit;}
 small a{text-decoration:none;} a:hover{color:#888;text-decoration:underline;}
 hr{border:0;background:#<?=$d?'DDD':'888'?>;height:1px;}
-.pop > button{color:inherit;background:none;border:0;padding:0 0 0 .5rem;font-size:1rem;
-	width:100%;text-align:left;} .pop .c{padding:1em 2em;}
-.pop > button img{transform:rotate(0);margin-bottom:2px;transition:transform .2s;}
-.pop.n .c{display:none;} .pop.n > button img{transform:rotate(-90deg);}
+details{cursor:pointer;} details > div{padding:1em 2em;}
+details summary::-webkit-details-marker{color:#AAA;}
 input[type=checkbox]{-webkit-appearance:none;-moz-appearance:none;appearance:none;
 	background:#<?=$d?'CCC':'888'?>;display:inline-block;position:relative;width:31px;
 	height:16px;margin:0 0 -3px 0;border-radius:10px;transition:background .4s ease;}
