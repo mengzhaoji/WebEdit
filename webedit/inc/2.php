@@ -1,6 +1,6 @@
 <?php if(!$auth)exit;?><button onclick="save();" style="float:right;">Save</button><h1>Menu</h1>
 <style>#menu{list-style:none;padding:0 0 0 0;margin:0;width:intrinsic;}
-#menu:empty:before{content:'No items';}
+#menu:empty:before{content:'No items';margin:1em;display:inline-block;}
 #menu li,#add{padding:.5em;min-width:17em;box-shadow:0 0 5px #0008;}
 #menu .gh{opacity:.6;border:1px dashed #888;}
 #menu li{margin:1em;cursor:move;border:1px solid #<?=$d?'EEE':'555'?>;}

@@ -25,12 +25,10 @@
   echo '<li tabindex="-1" data-url="'.$d.'/'.$f.'" draggable="true"><small class="date">'.($mod==date('Y/m/d')?'Today':$mod).', '.date('H:i',filemtime($d.'/'.$f)).'</small><small class="act"><a title="Download" onclick="location=\''.$dir.'xhr/0.php?t='.$t.'&a=2&l=\'+encodeURIComponent(this.parentNode.parentNode.dataset.url);">⤓</a> | <a title="Rename" onclick="var name=prompt(\'Enter the new name:\',this.parentNode.parentNode.dataset.url.split(\'/\').pop());if(name){name=name.replace(/[\/<>:]/gui,\'\');if(name!=\'\'){var oldL=this.parentNode.parentNode.dataset.url,newL=this.parentNode.parentNode.parentNode.parentNode.dataset.url+\'/\'+name;if(xhr(0,{a:0,f:oldL,n:newL})===\'1\'){this.parentNode.parentNode.querySelector(\'.name\').innerHTML=name;this.parentNode.parentNode.dataset.url=newL;}else alert(\'Error\');}else alert(\'This filename is not valid\');}">a…</a> | <a title="Delete" onclick="if(confirm(\'Are you sure you want to delete this entry? This cannot be undone.\'))if(xhr(0,{a:1,l:this.parentNode.parentNode.dataset.url})===\'1\')this.parentNode.parentNode.outerHTML=\'\';else alert(\'Error\');">⌫</a>'.($isdir?'':' | <a title="Edit" onclick="page(1,{i:this.parentNode.parentNode.dataset.url});">✎</a>').'</small><span ondblclick="'.($isdir?'this.parentNode.querySelector(\'ul\').classList.toggle(\'show\');this.parentNode.querySelector(\'img:not(.icon)\').classList.toggle(\'r\');"><img src="'.$dir.'src/down.svg" onclick="this.parentNode.parentNode.querySelector(\'ul\').classList.toggle(\'show\');this.classList.toggle(\'r\');" draggable="false">':'page(1,{i:this.parentNode.dataset.url});">').'<img class="icon'.($isdir?'':' f').'" src="'.$dir.'src/d'.($isdir?'ir':'oc').'.svg" draggable="false"><span class="name">'.$f.'</span></span>';if($isdir){echo '<ul>';tellDir($d.'/'.$f);echo '</ul>';}echo '</li>';
 }}tellDir(rtrim(str_repeat('../',substr_count($dir,'/')-1),'/'));?></ul></div><br>
 
-<div class="pop n"><button onclick="this.parentNode.classList.toggle('n');"><img src="<?=$dir?>src/down.svg"> File upload</button><div class="c">
-<input type="file" id="uplFiles" multiple>
+<details><summary>File upload</summary><div><input type="file" id="uplFiles" multiple>
 <input type="button" value="▶︎" id="uplSubmit" onclick="var fs=[];for(var i=0;i<$('uplFiles').files.length;i++)fs.push($('uplFiles').files[i]);upload(fs,$('files'));">
 <input type="button" value="✕" id="uplCancel" onclick="abort();" style="display:none;"><br>
-<small id="uplTimeSmall" style="display:none;"><span id="uplTime"></span> left …</small>
-</div></div>
+<small id="uplTimeSmall" style="display:none;"><span id="uplTime"></span> left …</small></div></details>
 
 <script>function newDir(nm){if(nm){nm=nm.replace(/[\/"'<>#?:]/gu,'');if(nm!=''){
 var url=$('files').dataset.url+'/'+nm,set=0;
