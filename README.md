@@ -3,4 +3,4 @@
 
 I made the whole files on my own and without any team or library.
 
-<span style="color:red;">DUE TO COPYRIGHT CHANGES ALL DISTRIBUTIONS MUST NOT BE PUBLICLY ACCESSIBLE</span>
+<span style="color:red !important;">**DUE TO COPYRIGHT CHANGES ALL DISTRIBUTIONS MUST NOT BE PUBLICLY ACCESSIBLE**</span>
